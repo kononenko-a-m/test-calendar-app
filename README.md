@@ -17,6 +17,8 @@ docker compose -f ./docker-compose.db.yml -f ./docker-compose.yml up
 ./gradlew test
 ```
 
+**Note**: there are only integration tests now, as I truly believe they give way more value than unit test. In general, for these app, I would use unit testing for testing validation, however I believe that current integration tests are enough for this task.
+
 ## API
 
 Application expose following endpoints:

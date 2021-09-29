@@ -1,8 +1,9 @@
 server:
-  error.include-message: always
+  # In general we should use @ControllerAdvice for proper validation handling
+  error.include-message: never
 
 spring:
-  # event as we don't have flyway in regular dependency better to ensure that it wouldn't run on startup
+  # even as we don't have flyway in regular dependency better to ensure that it wouldn't run on startup
   flyway:
     enabled: false
 
