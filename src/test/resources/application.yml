@@ -1,0 +1,16 @@
+server:
+  error.include-message: always
+
+spring:
+  flyway:
+    enabled: true
+
+  jackson.date-format: "yyyy-MM-dd HH:mm:ss"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true

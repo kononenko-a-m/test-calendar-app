@@ -1,0 +1,20 @@
+server:
+  error.include-message: always
+
+spring:
+  # event as we don't have flyway in regular dependency better to ensure that it wouldn't run on startup
+  flyway:
+    enabled: false
+
+  jackson.date-format: "yyyy-MM-dd HH:mm:ss"
+  datasource:
+    url: "jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/${MYSQL_DATABASE}"
+    username: "${MYSQL_USER}"
+    password: "${MYSQL_PASSWORD}"
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: false
+    show-sql: false

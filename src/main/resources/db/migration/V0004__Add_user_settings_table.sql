@@ -1,0 +1,8 @@
+CREATE TABLE user_settings (
+  id BINARY(16) NOT NULL PRIMARY KEY,
+  user_id BINARY(16) NOT NULL,
+  timezone_id BINARY(16) NOT NULL,
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (timezone_id) REFERENCES timezones(id)
+) ENGINE=InnoDB;
